@@ -1,0 +1,76 @@
+
+			<!DOCTYPE html>
+			<html>
+			<head>
+			<title>Swoop | Pay</title>
+			<link rel="stylesheet" type = "text/css" href="css/drive.css">
+			<link href="css/bootstrapcss/bootstrap.min.css" rel="stylesheet">	
+			<script src="https://checkout.stripe.com/checkout.js"></script>
+			</head>
+
+			<!-- THE HEADER -->
+  <body>
+    <div class="header">
+    <link href='http://fonts.googleapis.com/css?family=Regular|Lato' rel='stylesheet' type='text/css'>
+      <div class="container">
+        <div class="logo">
+          <h1><a href = "header.html">swoop.</a></h1>
+        </div>
+                 <!-- THE NAVIGATION -->
+          <div class="nav">
+
+           <link href='http://fonts.googleapis.com/css?family=Regular|Lato' rel='stylesheet' type='text/css'>
+           <ul>
+              <li onmouseover="changeTo(this)" onmouseout="changeBack(this)"><a href="#">Contact </a></li>
+              <li onmouseover="changeTo(this)" onmouseout="changeBack(this)"><a href="#">Help </a></li>
+              <li onmouseover="changeTo(this)" onmouseout="changeBack(this)"><a href="payment_final.html">Pay </a></li>
+              <li onmouseover="changeTo(this)" onmouseout="changeBack(this)"><a href="request.html">Ride </a></li>
+              <li onmouseover="changeTo(this)" onmouseout="changeBack(this)"><a href="map.html">Drive </a></li>
+            </ul>
+          </div>
+          </div>
+
+       </div>
+    </div>
+<!-- END OF HEADER -->
+
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+		<style>
+		.w3-btn {width:150px;}
+		</style>
+			<div style="width:100%; height:100%; position:absolute; vertical-align:middle; text-align:center;">
+		    <button class="w3-btn w3-round" id="customButton" type="button" style="background-color:#4CAF50; margin-left:auto; margin-right:auto; display:block; margin-top:22%; margin-bottom:0%"; padding: "15px 32px"; color:"white"; cursor: "pointer">
+
+		Make Payment</button> 
+		</div>​
+
+			
+			<script>
+			var handler = StripeCheckout.configure({
+				key: 'pk_test_rlqbXX6nX2Vr8UWDHKVx0wog',
+				image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
+				locale: 'auto',
+				token: function(token) {
+			    // You can access the token ID with `token.id`.
+			    // Get the token ID to your server-side code for use.
+			}
+			});
+
+			document.getElementById('customButton').addEventListener('click', function(e) {
+			  // Open Checkout with further options:
+			  handler.open({
+			  	name: 'Demo Site',
+			  	description: '2 widgets',
+			  	amount: 2000
+			  });
+			  e.preventDefault();
+			});
+
+			// Close Checkout on page navigation:
+			window.addEventListener('popstate', function() {
+				handler.close();
+			});
+			</script>
+
+			</html>
