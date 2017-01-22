@@ -1,0 +1,60 @@
+body{
+	width:100%;
+	margin:auto;
+	background-image: url("https://static.pexels.com/photos/13861/IMG_3496bfree.jpg");
+}
+
+.container{
+	width:860px;
+	margin:0 auto;
+}
+
+.header{
+	background: #25383C;
+	width:100%;
+	top:0;
+	position: fixed;
+}
+
+.logo{
+  	font: 100 25px/0.2 'Lato', Helvetica, sans-serif;
+  	text-shadow: 1px 1px 1px #aaa;
+	color:white;
+	float:left;
+	padding-bottom: 10px
+}
+
+a {
+	text-decoration: none;
+	color:white;
+}
+
+li {
+	list-style: none;
+	font-style: bold;
+	text-shadow: 2px 2px 2px #aaa;
+	float:right;
+	font-family:'Lato';
+	margin-left:20px;
+}
+
+.nav {
+	color:white;
+	padding-top: 34px;
+}
+
+.subheading{
+	font-family: 'Quicksand';
+	font-size: 24px;
+	color:white;
+}
+
+nav:hover
+{
+   color:white
+}
+
+
+.content {
+	font-family:'Quicksand';
+}

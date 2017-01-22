@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8">
+    <head>
+        <title>Map Page</title>
+        
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrapcss/bootstrap.min.css" rel="stylesheet">
+        
+        <!-- Custom CSS -->
+        <link href="css/map1.css" rel="stylesheet">
+        <link rel="stylesheet" type = "text/css" href="css/drive.css">
+        <script type='text/javascript' src="javascript/header.js"></script>
+    </head>
+    <body>
+        <div >
+            <div class="header">
+                <link href='http://fonts.googleapis.com/css?family=Regular|Lato' rel='stylesheet' type='text/css'>
+                <div class="container">
+                    <div class="logo">
+                    <h1><a href = "header.html">swoop.</a></h1>
+                </div>
+<!-- END OF HEADER -->
+
+         <!-- THE NAVIGATION -->
+                <div class="nav">
+                    <link href='http://fonts.googleapis.com/css?family=Regular|Lato' rel='stylesheet' type='text/css'>
+                    <ul>
+                        <li onmouseover="changeTo(this)" onmouseout="changeBack(this)"><a href="#">Contact </a></li>
+                        <li onmouseover="changeTo(this)" onmouseout="changeBack(this)"><a href="#">Help </a></li>
+                        <li onmouseover="changeTo(this)" onmouseout="changeBack(this)"><a href="#">Pay </a></li>
+                        <li onmouseover="changeTo(this)" onmouseout="changeBack(this)"><a href="request.html">Request </a></li>
+                        <li onmouseover="changeTo(this)" onmouseout="changeBack(this)"><a href="map.html">Drive </a></li>
+                    </ul>
+                </div>
+          </div>
+
+          <!-- END OF NAVIGATION -->
+
+        </div>  <!-- Closing container class -->
+              
+            <div class="mp-container row"><!-- Container for map and post -->
+                <div class="des-container col-md-4">
+                <div class="shiftstart">
+                    <br><br><br><br><br><br><br>
+                    <p>Connect. Earn. Save the planet.</p>
+                    </div>
+                <div class="moretext">
+                    <p>It's never been easier. Enter your start point and your destination, and hit go. You take care of the ride, and we take care of the rest.</p></div>
+                </div>
+
+                <div class="map-container col-md-8">
+                    <div id="map_canvas"></div>
+                    <div id="pac-input" class="input-group controls">
+                        <!--input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2"-->
+                        <input class="form-control" id="start" name="start" type="text" placeholder="Start" aria-describedby="basic-addon2">
+                        <input class="form-control" id="end" name="end" type="text" placeholder="End" aria-describedby="basic-addon2">
+                        <button type="button" onclick="calcRoute();" class="btn btn-success">Go</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <!-- jQuery -->
+        <script src="javascript/jquery-1.12.0.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="javascript/bootstrapjs/bootstrap.min.js"></script>
+    
+        <!-- Custom JavaScript -->
+        <script src="https://maps.googleapis.com/maps/api/js?libraries=geometry"></script>
+        <!--script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHYh4taJgrsDwDiNpDqvS-JRhID5AsGxU&libraries=places&callback=setMap" async defer></script-->
+        <script src="javascript/map1.js"></script>
+    </body>
+</html>

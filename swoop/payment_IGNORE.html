@@ -1,0 +1,59 @@
+
+			<!DOCTYPE html>
+			<html>
+			<head>
+			  <link href="css/bootstrapcss/bootstrap.min.css" rel="stylesheet">	
+			<link rel="stylesheet" type = "text/css" href="css/payment.css">
+
+<!-- THE HEADER -->
+  <body>
+    <div class="header">
+    <link href='http://fonts.googleapis.com/css?family=Regular|Lato' rel='stylesheet' type='text/css'>
+      <div class="container">
+        <div class="logo">
+          <h1><a href = "#">swoop.</a></h1>
+        </div>
+<!-- END OF HEADER -->
+			
+			<script src="https://checkout.stripe.com/checkout.js"></script>
+			</head>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+		<style>
+		.w3-btn {width:150px;}
+		</style>
+			<div style="width:100%; height:100%; position:absolute; vertical-align:middle; text-align:center;">
+		    <button class="w3-btn w3-round" id="customButton" type="button" style="background-color:#4CAF50; margin-left:auto; margin-right:auto; display:block; margin-top:22%; margin-bottom:0%"; padding: "15px 32px"; color:"white"; cursor: "pointer">
+
+		Purchase</button> 
+		</div>​
+
+			
+			<script>
+			var handler = StripeCheckout.configure({
+				key: 'pk_test_rlqbXX6nX2Vr8UWDHKVx0wog',
+				image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
+				locale: 'auto',
+				token: function(token) {
+			    // You can access the token ID with `token.id`.
+			    // Get the token ID to your server-side code for use.
+			}
+			});
+
+			document.getElementById('customButton').addEventListener('click', function(e) {
+			  // Open Checkout with further options:
+			  handler.open({
+			  	name: 'Demo Site',
+			  	description: '2 widgets',
+			  	amount: 2000
+			  });
+			  e.preventDefault();
+			});
+
+			// Close Checkout on page navigation:
+			window.addEventListener('popstate', function() {
+				handler.close();
+			});
+			</script>
+
+			</html>
